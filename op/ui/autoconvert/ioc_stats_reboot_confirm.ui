@@ -6,7 +6,7 @@
         <rect>
             <x>903</x>
             <y>166</y>
-            <width>273</width>
+            <width>237</width>
             <height>158</height>
         </rect>
     </property>
@@ -14,6 +14,94 @@
         <string>
 
 QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
+
+caTable {
+       font: 10pt;
+       background: cornsilk;
+       alternate-background-color: wheat;
+}
+
+caLineEdit {
+     border-radius: 1px;
+     background: lightyellow;
+     color: black;
+ }
+
+caTextEntry {
+    color: rgb(127, 0, 63);
+    background-color: cornsilk;
+    selection-color: #0a214c;
+    selection-background-color: wheat;
+    border: 1px groove black;
+    border-radius: 1px;
+    padding: 1px;
+}
+
+caTextEntry:focus {
+    padding: 0px;
+    border: 2px groove darkred;
+    border-radius: 1px;
+}
+
+QPushButton {
+      border-color: #00b;
+      border-radius: 2px;
+      padding: 3px;
+      border-width: 1px;
+
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						   stop:0   rgba(224, 239, 255, 255),
+						   stop:0.5 rgba(199, 215, 230, 255),
+						   stop:1   rgba(184, 214, 236, 255));
+}
+QPushButton:hover {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						stop:0   rgba(201, 226, 255, 255),
+						stop:0.5 rgba(177, 204, 230, 255),
+						stop:1   rgba(163, 205, 236, 255));
+}
+QPushButton:pressed {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						stop:0   rgba(174, 219, 255, 255),
+						stop:0.5 rgba(165, 199, 230, 255),
+						stop:1   rgba(134, 188, 236, 255));
+}
+
+QPushButton:disabled {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						stop:0   rgba(174, 219, 255, 255),
+						stop:0.5 rgba(165, 199, 230, 255),
+						stop:1   rgba(134, 188, 236, 255));
+}
+
+caChoice {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+}
+
+caChoice &gt; QPushButton {
+      text-align: left;
+      padding: 1px;
+}
+
+caSlider::groove:horizontal {
+border: 1px solid #bbb;
+background: lightgrey;
+height: 20px;
+border-radius: 4px;
+}
+
+caSlider::handle:horizontal {
+background: red;
+border: 1px solid #777;
+width: 13px;
+margin-top: -2px;
+margin-bottom: -2px;
+border-radius: 2px;
+}
+
+
 
 </string>
     </property>
@@ -37,17 +125,17 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 </color>
             </property>
             <property name="text">
-                <string>IOC Reload Access Conf File Confirmation</string>
+                <string>IOC Reboot Confirmation</string>
             </property>
             <property name="fontScaleMode">
                 <enum>ESimpleLabel::WidthAndHeight</enum>
             </property>
             <property name="geometry">
                 <rect>
-                    <x>6</x>
+                    <x>4</x>
                     <y>4</y>
-                    <width>600</width>
-                    <height>25</height>
+                    <width>230</width>
+                    <height>20</height>
                 </rect>
             </property>
             <property name="alignment">
@@ -83,7 +171,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                     <x>5</x>
                     <y>29</y>
                     <width>212</width>
-                    <height>27</height>
+                    <height>25</height>
                 </rect>
             </property>
             <property name="alignment">
@@ -142,16 +230,16 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 </color>
             </property>
             <property name="text">
-                <string>Are you sure you want to reload the Access</string>
+                <string>Are you sure you want to</string>
             </property>
             <property name="fontScaleMode">
                 <enum>ESimpleLabel::WidthAndHeight</enum>
             </property>
             <property name="geometry">
                 <rect>
-                    <x>8</x>
+                    <x>12</x>
                     <y>66</y>
-                    <width>378</width>
+                    <width>216</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -178,16 +266,16 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 </color>
             </property>
             <property name="text">
-                <string>Configuration File for $(ioc)?</string>
+                <string>reboot $(ioc)?</string>
             </property>
             <property name="fontScaleMode">
                 <enum>ESimpleLabel::WidthAndHeight</enum>
             </property>
             <property name="geometry">
                 <rect>
-                    <x>8</x>
+                    <x>12</x>
                     <y>83</y>
-                    <width>270</width>
+                    <width>126</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -198,7 +286,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caMessageButton" name="caMessageButton_0">
             <property name="geometry">
                 <rect>
-                    <x>65</x>
+                    <x>54</x>
                     <y>111</y>
                     <width>123</width>
                     <height>30</height>
@@ -208,7 +296,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>EPushButton::WidthAndHeight</enum>
             </property>
             <property name="channel">
-                <string>$(ioc):READACF</string>
+                <string>$(ioc):SysReset</string>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -225,7 +313,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 </color>
             </property>
             <property name="label">
-                <string>Reload ACF</string>
+                <string>Reboot Now!</string>
             </property>
             <property name="pressMessage">
                 <string>1</string>
